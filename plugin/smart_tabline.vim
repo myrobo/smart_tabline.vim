@@ -1,4 +1,4 @@
-criptencoding utf-8
+scriptencoding utf-8
 
 if exists('g:loaded_smart_tabline')
     finish

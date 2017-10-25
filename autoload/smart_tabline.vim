@@ -1,4 +1,4 @@
-criptencoding utf-8
+scriptencoding utf-8
 
 " ##### tabline settings #####
 " usage : set tabline=%!MyTabLine()
