@@ -3,7 +3,7 @@ scriptencoding utf-8
 " ##### tabline settings #####
 " usage : set tabline=%!MyTabLine()
 
-function SmartTabLine()
+function smart_tablinr#SmartTabLine()
 	let s = ''
 	let margin = 2
 	let tabnum = tabpagenr('$')
