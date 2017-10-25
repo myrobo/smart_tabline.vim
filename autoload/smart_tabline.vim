@@ -3,7 +3,7 @@ scriptencoding utf-8
 " ##### tabline settings #####
 " usage : set tabline=%!MyTabLine()
 
-function MyTabLine()
+function SmartTabLine()
 	let s = ''
 	let margin = 2
 	let tabnum = tabpagenr('$')
@@ -16,7 +16,7 @@ function MyTabLine()
 		endif
 
 		" make label with MyTabLabel()
-		let s .= ' %{MyTabLabel(' . (i + 1) . ' , ' . tabcharnum . ')} '
+		let s .= ' %{SmartTabLabel(' . (i + 1) . ' , ' . tabcharnum . ')} '
 	endfor
 
 	" fill blank space with TabLineFill
@@ -25,7 +25,7 @@ function MyTabLine()
 	return s
 endfunction
 
-function MyTabLabel(n, tabcharnum)
+function SmartTabLabel(n, tabcharnum)
 	let bufID = tabpagebuflist(a:n)[tabpagewinnr(a:n)-1]
 	let fullpath = bufname(bufID)
 	let filename = fnamemodify(fullpath, ":t:r")
